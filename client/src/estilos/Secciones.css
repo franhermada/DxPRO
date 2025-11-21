@@ -1,0 +1,663 @@
+/* === IMPORTACIÓN DE FUENTES === */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Merriweather:wght@700&display=swap");
+
+/* === REGLAS GLOBALES Y CORRECCIÓN DE OVERFLOW === */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden !important;
+  width: 100% !important;
+  position: relative;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #111;
+  background-color: #f5f7fa;
+  overflow-y: auto;
+  max-width: 100%;
+}
+
+#root,
+.app-contenedor,
+main {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* === ESTILOS DE TEXTO === */
+h1,
+h2,
+h3 {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  color: #002b5c;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+p,
+label,
+input,
+select,
+button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* === BASE VISUAL PARA TODAS LAS SECCIONES === */
+.seccion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  width: 100%;
+  padding: 120px 20px 80px;
+  box-sizing: border-box;
+  background: url("/otros/fondo.png") center/cover no-repeat fixed;
+}
+
+/* === RECUADRO (COMO EN INICIO) === */
+.card {
+  max-width: 1000px;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 40px 50px;
+  text-align: center;
+  color: #002b5c;
+}
+
+
+/* === TITULOS === */
+.card h1,
+.card h2,
+.card h3 {
+  color: #002b5c;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* === LISTAS === */
+.card ul {
+  text-align: left;
+  margin: 10px auto;
+  width: 85%;
+  list-style-type: decimal;
+}
+
+.card li {
+  margin: 10px 0;
+}
+
+/* === BOTONES === */
+.boton {
+  display: inline-block;
+  background-color: #002b5c;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 15px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.boton:hover {
+  background-color: #004a92;
+  transform: scale(1.03);
+}
+
+/* === VARIANTES DE SECCIÓN (COLOR DE ACENTO) === */
+.tutorial .card {
+  border-top: 5px solid #4b4b4b;
+}
+
+.casos-avanzados .card {
+  border-top: 5px solid #ff7b00;
+}
+
+.atlas .card {
+  border-top: 5px solid #008b5c;
+}
+
+.sobre-dxpro .card {
+  background: #fff;
+  color: #002b5c;
+  border-top: 5px solid #002b5c;
+  text-align: center;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .card {
+    width: 90%;
+    padding: 30px 20px;
+  }
+
+  .card ul {
+    width: 95%;
+  }
+}
+/* === ATLAS MANUAL CON MENÚS DESPLEGABLES === */
+.atlas .card {
+  border-top: 5px solid #008b5c;
+  box-shadow: 0 4px 10px rgba(0, 139, 92, 0.25);
+  padding: 50px 60px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 14px;
+  color: #002b5c;
+}
+
+/* Encabezado principal */
+.atlas .card h1 {
+  font-family: "Merriweather", serif;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Texto introductorio */
+.atlas .card p {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Botones principales de sistemas */
+.botones-sistemas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 25px 0;
+}
+
+.boton-sistema {
+  background: #e6f5ef;
+  border: 2px solid #008b5c;
+  border-radius: 10px;
+  color: #004d3a;
+  font-weight: 600;
+  padding: 10px 22px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.boton-sistema:hover {
+  background: #008b5c;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.boton-sistema.activo {
+  background: #008b5c;
+  color: white;
+  box-shadow: 0 3px 10px rgba(0, 139, 92, 0.3);
+}
+
+/* Bloque de temas desplegables */
+.temas {
+  margin-top: 25px;
+  text-align: left;
+}
+
+.tema {
+  background: #ffffff;
+  margin: 10px 0;
+  padding: 15px 20px;
+  border-radius: 10px;
+  border-left: 4px solid #008b5c;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tema:hover {
+  background: #f5f5f5;
+}
+
+.tema h3 {
+  color: #005f3f;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.tema.activo {
+  background: #e6f5ef;
+}
+
+/* Contenido interno del tema */
+.contenido-tema {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid #ddd;
+  line-height: 1.6;
+  color: #222;
+  animation: desplegar 0.3s ease;
+}
+
+@keyframes desplegar {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contenido-tema img {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: 15px auto;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contenido-tema audio {
+  display: block;
+  margin: 10px auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .atlas .card {
+    padding: 30px 20px;
+  }
+
+  .botones-sistemas {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+/* === Formularios de autenticación === */
+.auth-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border-top: 4px solid #007bff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.auth-title {
+  color: #002b5c;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+.auth-form label {
+  font-weight: 600;
+  color: #002b5c;
+}
+
+.auth-form input,
+.auth-form select {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.2s ease-in-out;
+}
+
+.auth-form input:focus,
+.auth-form select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+.auth-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.3s ease;
+}
+
+.auth-btn:hover {
+  background-color: #0056b3;
+}
+
+.auth-switch {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: #002b5c;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.link-btn:hover {
+  color: #0056b3;
+}
+
+.auth-info {
+  font-size: 0.9rem;
+  color: #333;
+  margin-top: 5px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* === Fondo de autenticación === */
+.auth-bg {
+  background: url("/otros/fondo.png") center/cover no-repeat fixed;
+  min-height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* === Contenedor unificado === */
+.auth-container {
+  width: 100%;
+  max-width: 500px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.95);
+  border-top: 5px solid #007bff;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.auth-container form {
+  transition: height 0.3s ease;
+  min-height: 320px;
+}
+
+/* === Vínculos y extras === */
+.auth-links {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.auth-links .link-btn {
+  font-size: 0.9rem;
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.auth-links .link-btn:hover {
+  color: #003d80;
+}
+
+/* Fijar el recuadro de registro */
+.auth-extra {
+  min-height: 80px;
+  transition: all 0.3s ease;
+}
+/* === Centrado del enlace de recuperación === */
+.auth-links {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.auth-links .link-btn {
+  font-size: 0.9rem;
+  color: #0056b3;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.auth-links .link-btn:hover {
+  color: #002b80;
+}
+
+/* === Modal recuperación de contraseña === */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content h3 {
+  color: #002b5c;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  font-size: 0.9rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.modal-buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.auth-btn.small {
+  padding: 8px 14px;
+  font-size: 0.9rem;
+}
+
+.link-btn.small {
+  font-size: 0.9rem;
+  color: #555;
+}
+/* Modal fondo oscuro */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Contenedor del modal */
+.modal-content {
+  background: #fff;
+  color: #222;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  padding: 20px 25px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  max-height: 80vh;
+  overflow-y: auto;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Título y texto */
+.modal-content h3 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.modal-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Botón cerrar */
+.modal-close-btn {
+  display: block;
+  margin: 20px auto 0;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.modal-close-btn:hover {
+  background: #0056b3;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+/* Estilo limpio para la línea de "He leído y acepto..." */
+.auth-terminos {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #fff; /* o #222 si el fondo es claro */
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.auth-terminos label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.auth-terminos input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-right: 6px;
+}
+
+/* Para que el link no rompa la línea ni quede cortado */
+.auth-terminos .link-btn {
+  color: #007bff;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.auth-terminos .link-btn:hover {
+  color: #0056b3;
+}
+/* --- TOASTIFY PERSONALIZADO PARA DxPRO --- */
+
+.Toastify__toast {
+  border-radius: 12px !important;
+  font-family: "Inter", "Segoe UI", sans-serif !important;
+  font-size: 0.95rem !important;
+  padding: 12px 18px !important;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15) !important;
+}
+
+.Toastify__toast--success {
+  background: linear-gradient(135deg, #9c6ade, #6e4ca3) !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+}
+
+.Toastify__toast--error {
+  background: linear-gradient(135deg, #ff5c5c, #c94a4a) !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+}
+
+.Toastify__toast--warning {
+  background: linear-gradient(135deg, #ffcc70, #ffb347) !important;
+  color: #333 !important;
+  font-weight: 600 !important;
+}
+
+.Toastify__toast--info {
+  background: linear-gradient(135deg, #5caeff, #3a7bd5) !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+}
+
+.Toastify__progress-bar {
+  height: 4px !important;
+  border-radius: 0 0 12px 12px !important;
+  background: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Íconos */
+.Toastify__toast-icon svg {
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.2));
+}
+
+/* Centramos visualmente y damos aire */
+.Toastify__toast-container {
+  padding: 10px !important;
+}
+
+.Toastify__close-button {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.Toastify__close-button:hover {
+  color: #fff !important;
+}
+.link-legal {
+  color: #4da6ff;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.link-legal:hover {
+  color: #1a73e8;
+}

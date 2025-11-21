@@ -1,0 +1,288 @@
+.sobredxpro {
+  padding-top: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+/* --- TARJETAS --- */
+.sobredxpro .card {
+  max-width: 1000px;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 14px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(6px);
+  text-align: center;
+  padding: 40px 50px;
+  border-top: 5px solid #9c6ade;
+}
+
+.sobredxpro h2,
+.sobredxpro h3 {
+  color: #1a2a4a;
+  margin-bottom: 20px;
+}
+
+/* --- ASPECTOS LEGALES --- */
+.aspectos-legales p {
+  max-width: 750px;
+  margin: 10px auto;
+  line-height: 1.7;
+  color: #222;
+}
+
+.aspectos-legales .link-btn {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease-in-out;
+}
+
+.aspectos-legales .link-btn:hover {
+  color: #0056b3;
+}
+
+/* --- EQUIPO DE TRABAJO (CARRUSEL RESTAURADO) --- */
+.equipo-carrusel {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding: 20px 10px;
+  margin-top: 10px;
+  justify-content: flex-start;
+}
+
+.equipo-carrusel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.equipo-carrusel::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 43, 92, 0.4);
+  border-radius: 10px;
+}
+
+.miembro {
+  flex: 0 0 auto;
+  width: 240px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  text-align: center;
+  scroll-snap-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.miembro:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.miembro img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* --- MODALES --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #fff;
+  color: #222;
+  border-radius: 12px;
+  width: 85%;
+  max-width: 650px;
+  padding: 25px 30px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.35);
+  max-height: 85vh;
+  overflow-y: auto;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.modal-content h3 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #0a2342;
+}
+
+.modal-text {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.modal-close-btn {
+  display: block;
+  margin: 20px auto 0;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.modal-close-btn:hover {
+  background: #0056b3;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 600px) {
+  .sobredxpro {
+    padding-top: 110px;
+  }
+
+  .sobredxpro .card {
+    padding: 25px 20px;
+  }
+
+  .miembro {
+    width: 200px;
+  }
+}
+.link-legal {
+  color: #4da6ff;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.link-legal:hover {
+  color: #1a73e8; /* azul más fuerte */
+}
+/* IMAGEN AMPLIADA */
+.modal-img-container {
+  background: #fff;
+  padding: 10px;
+  border-radius: 12px;
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-img {
+  max-width: 100%;
+  max-height: 85vh;
+  border-radius: 12px;
+  object-fit: contain;
+  display: block;
+}
+/* --- MODAL DE IMAGEN CON NAVEGACIÓN --- */
+.modal-overlay-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999; /* Para que quede encima de la navbar */
+  backdrop-filter: blur(2px);
+}
+
+/* contenedor de la imagen */
+.modal-img-box {
+  max-width: 85%;
+  max-height: 85%;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  animation: fadein 0.2s ease-in-out;
+}
+
+.modal-img {
+  width: 100%;
+  height: auto;
+  max-height: 85vh;
+  object-fit: contain;
+  display: block;
+}
+
+/* Botón cerrar */
+.modal-close-img {
+  position: fixed;
+  top: 25px;
+  right: 35px;
+  background: #ffffffdd;
+  border: none;
+  font-size: 32px;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 4px 14px;
+  z-index: 100000;
+  transition: 0.2s;
+}
+
+.modal-close-img:hover {
+  background: white;
+  transform: scale(1.1);
+}
+
+/* Flechas */
+.modal-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ffffffcc;
+  border: none;
+  color: #111;
+  font-size: 48px;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 50%;
+  z-index: 100000;
+  transition: 0.2s;
+}
+
+.modal-arrow:hover {
+  background: #fff;
+  transform: translateY(-50%) scale(1.12);
+}
+
+.modal-arrow.left {
+  left: 40px;
+}
+
+.modal-arrow.right {
+  right: 40px;
+}
+
+@keyframes fadein {
+  from { opacity: 0; transform: scale(0.93); }
+  to { opacity: 1; transform: scale(1); }
+}

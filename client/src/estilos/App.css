@@ -1,0 +1,132 @@
+.app-contenedor {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Asegura que el footer quede abajo */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Ajuste general de secciones */
+.seccion {
+  padding-top: 110px; /* deja espacio para la navbar */
+  padding-bottom: 60px; /* espacio para el footer */
+  min-height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+/* Cartas */
+.card {
+  max-width: 1000px;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 14px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  padding: 30px 40px;
+  text-align: left;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  background: #002b5c;
+  color: white;
+  padding: 16px;
+  margin-top: auto;
+}
+/* Evita cualquier desborde global */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Por si alguna card o imagen se pasa */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+/* === FIX DEFINITIVO PARA EL BODY Y DESBORDES === */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden !important;
+  width: 100% !important;
+  position: relative;
+}
+
+/* Evita el bug del 100vw que causa el scroll lateral */
+body {
+  overflow-y: auto;
+  max-width: 100%;
+}
+
+/* Asegura que el contenedor nunca se extienda más del viewport */
+#root,
+.app-contenedor,
+main {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+.atlas-temas {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.atlas-temas h3 {
+  color: #005f3f;
+  margin-bottom: 20px;
+}
+
+.atlas-temas-botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.boton-tema {
+  background: #f8fff9;
+  border: 2px solid #00a56f;
+  color: #003f2f;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 10px 20px;
+  transition: all 0.25s ease;
+}
+
+.boton-tema:hover {
+  background: #00a56f;
+  color: white;
+  transform: scale(1.05);
+}
+
+.volver {
+  margin-top: 30px;
+  background: #005f3f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.volver:hover {
+  background: #00a56f;
+}

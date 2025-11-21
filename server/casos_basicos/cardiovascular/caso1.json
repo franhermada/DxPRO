@@ -1,0 +1,335 @@
+{
+  "presentacion": "Paciente masculino de 55 años que llega a la guardia por un dolor fuerte en el pecho.",
+  "respuestas": {
+    "nombre": {
+      "variantes": [
+        "como te llamas",
+        "cual es tu nombre",
+        "tu nombre",
+        "decime tu nombre"
+      ],
+      "respuesta": "Me llamo Juan."
+    },
+
+    "edad": {
+      "variantes": [
+        "cuantos años tenes",
+        "que edad tenes",
+        "tu edad"
+      ],
+      "respuesta": "Tengo 55 años."
+    },
+
+    "motivo_consulta": {
+      "variantes": [
+        "porque venis",
+        "que te pasa",
+        "que te trae hoy",
+        "motivo de consulta"
+      ],
+      "respuesta": "Vine porque me empezó un dolor muy fuerte en el pecho que no se me pasa."
+    },
+
+    "inicio": {
+      "variantes": [
+        "cuando empezo",
+        "desde cuando te duele",
+        "hace cuanto empezo",
+        "inicio del dolor"
+      ],
+      "respuesta": "Empezó hace más o menos dos horas."
+    },
+
+    "contexto_inicio": {
+      "variantes": [
+        "que estabas haciendo",
+        "que hacias cuando empezo",
+        "en que contexto empezo"
+      ],
+      "respuesta": "Me empezó cuando estaba subiendo las escaleras de mi casa."
+    },
+
+    "localizacion": {
+      "variantes": [
+        "donde te duele",
+        "donde te molesta",
+        "en que parte del pecho",
+        "zona del dolor"
+      ],
+      "respuesta": "El dolor lo siento en el medio del pecho, detrás del esternón."
+    },
+
+    "irradiacion": {
+      "variantes": [
+        "se va para algun lado",
+        "a donde se va el dolor",
+        "el dolor se mueve",
+        "irradia hacia algun lado"
+      ],
+      "respuesta": "Sí, se me va para el brazo izquierdo y también un poco hacia la mandíbula."
+    },
+
+    "caracteristicas": {
+      "variantes": [
+        "como es el dolor",
+        "como es ese dolor",
+        "que tipo de dolor es",
+        "descripcion del dolor"
+      ],
+      "respuesta": "Es como si me apretaran fuerte el pecho, como una presión."
+    },
+
+    "intensidad": {
+      "variantes": [
+        "cuanto te duele",
+        "cuanto del 1 al 10",
+        "escala del dolor",
+        "intensidad del dolor"
+      ],
+      "respuesta": "Es muy fuerte, más o menos un 8 de 10."
+    },
+
+    "evolucion": {
+      "variantes": [
+        "como evoluciono",
+        "cambio el dolor",
+        "mejora o empeora"
+      ],
+      "respuesta": "Desde que empezó sigue igual, no bajó en ningún momento."
+    },
+
+    "alivio": {
+      "variantes": [
+        "que lo calma",
+        "que lo alivia",
+        "hay algo que lo calme"
+      ],
+      "respuesta": "Solo mejora un poco si me quedo quieto, pero no se va del todo."
+    },
+
+    "factores": {
+      "variantes": [
+        "que lo empeora",
+        "que lo hace peor",
+        "que lo agrava"
+      ],
+      "respuesta": "Empeora cuando hago esfuerzo o cuando me muevo."
+    },
+
+    "disnea": {
+      "variantes": [
+        "te falta el aire",
+        "dificultad para respirar",
+        "te cuesta respirar"
+      ],
+      "respuesta": "Sí, siento que me falta un poco el aire."
+    },
+
+    "diaforesis": {
+      "variantes": [
+        "estas transpirado",
+        "estas sudando",
+        "sudoracion"
+      ],
+      "respuesta": "Sí, empecé a transpirar de golpe cuando empezó el dolor."
+    },
+
+    "nauseas": {
+      "variantes": [
+        "tenes nauseas",
+        "ganas de vomitar",
+        "te sentis mareado"
+      ],
+      "respuesta": "Sí, tuve ganas de vomitar y un poco de mareo."
+    },
+
+    "estado_conciencia": {
+      "variantes": [
+        "estas consciente",
+        "estas mareado",
+        "sentis que te desmayas"
+      ],
+      "respuesta": "Estoy consciente, pero me siento débil y mareado."
+    },
+
+    "antecedentes": {
+      "variantes": [
+        "tenes alguna enfermedad",
+        "tenes problemas de salud",
+        "antecedentes"
+      ],
+      "respuesta": "Sí, tengo presión alta y colesterol alto."
+    },
+
+    "antecedentes_familiares": {
+      "variantes": [
+        "antecedentes familiares",
+        "tu familia tuvo algo",
+        "infarto en la familia"
+      ],
+      "respuesta": "Mi papá tuvo un infarto a los 60 años."
+    },
+
+    "habitos_tabaquicos": {
+      "variantes": [
+        "fumas",
+        "sos fumador",
+        "tabaco"
+      ],
+      "respuesta": "Sí, fumo un atado por día desde hace años."
+    },
+
+    "signos_vitales": {
+      "variantes": [
+        "signos vitales",
+        "constantes vitales",
+        "tension arterial",
+        "pulso"
+      ],
+      "respuesta": "TA 150/95, FC 95, FR 22, SatO2 92%, Temp 37.2°C."
+    },
+
+    "examen_cardiovascular": {
+      "variantes": [
+        "examen cardiaco",
+        "latidos",
+        "corazon",
+        "auscultacion cardiaca"
+      ],
+      "respuesta": "Ritmo regular, sin soplos. No hay signos de insuficiencia cardíaca aguda."
+    },
+
+    "examen_respiratorio": {
+      "variantes": [
+        "pulmones",
+        "ruidos respiratorios",
+        "examen respiratorio",
+        "auscultacion pulmonar"
+      ],
+      "respuesta": "Murmullo vesicular conservado en ambos campos pulmonares, sin rales, sin roncos ni sibilancias."
+    },
+
+    "examen_abdominal": {
+      "variantes": [
+        "abdomen",
+        "palpacion abdomen",
+        "examen abdominal"
+      ],
+      "respuesta": "Abdomen blando, depresible, no doloroso a la palpación, sin signos de irritación peritoneal."
+    },
+
+    "godet": {
+      "variantes": [
+        "godet",
+        "edema",
+        "palpacion piernas",
+        "hinchazon piernas"
+      ],
+      "respuesta": "No presenta edema en miembros inferiores. Signo de Godet negativo."
+    },
+
+    "electrocardiograma": {
+      "variantes": [
+        "ecg",
+        "electro",
+        "electrocardiograma"
+      ],
+      "respuesta": "ECG con supradesnivel del segmento ST en derivaciones V2-V4, compatible con infarto agudo de miocardio anterior."
+    },
+
+    "laboratorio": {
+      "variantes": [
+        "laboratorio",
+        "analisis de sangre",
+        "troponinas"
+      ],
+      "respuesta": "Troponina I elevada (0.8 ng/mL). Hemograma sin alteraciones relevantes. Glucemia 110 mg/dL. Colesterol total 250 mg/dL."
+    },
+
+    "radiografia": {
+      "variantes": [
+        "rx",
+        "radiografia de torax",
+        "placa"
+      ],
+      "respuesta": "Radiografía de tórax sin infiltrados, sin signos de congestión pulmonar ni derrame pleural."
+    },
+
+    "ecocardiograma": {
+      "variantes": [
+        "eco",
+        "ecocardiograma",
+        "eco del corazon"
+      ],
+      "respuesta": "Ecocardiograma con hipocinesia anteroseptal y fracción de eyección reducida, compatible con compromiso isquémico agudo."
+    }
+  },
+
+"evaluacion": {
+  "diagnostico_presuntivo": [
+    "Infarto agudo de miocardio",
+    "Pericarditis aguda",
+    "Disección aórtica",
+    "Embolia pulmonar",
+    "Neumonía"
+  ],
+
+  "diagnostico_definitivo": {
+    "principal": "Infarto agudo de miocardio con supradesnivel del ST (IAMCEST)",
+    "variantes": [
+      "iam",
+      "iam con supra st",
+      "infarto con supra st",
+      "iamcest",
+      "stemi",
+      "iam con elevacion del st",
+      "infarto agudo de miocardio con elevacion del st"
+    ]
+  },
+
+  "tratamiento_inicial_esperado": [
+    "Aspirina 300 mg vía oral",
+    "Oxígeno suplementario si la saturación es baja",
+    "Acceso venoso periférico",
+    "Monitoreo cardíaco continuo",
+    "Nitratos sublinguales si no hay presión baja",
+    "Clopidogrel",
+    "Heparina",
+    "Derivación urgente a unidad coronaria"
+  ]
+},
+"tratamiento_variantes": [
+  {
+    "grupo": "aspirina",
+    "variantes": [
+      "aspirina",
+      "aas",
+      "acido acetilsalicilico",
+      "ácido acetilsalicílico",
+      "asa",
+      "aspirina 300",
+      "aas 300",
+      "asa 300"
+    ]
+  },
+  {
+    "grupo": "clopidogrel",
+    "variantes": [
+      "clopidogrel",
+      "plavix",
+      "clopi"
+    ]
+  },
+  {
+    "grupo": "heparina",
+    "variantes": [
+      "heparina",
+      "enoxaparina",
+      "heparina sodica",
+      "heparina sódica",
+      "enoxa"
+    ]
+  }
+],
+"desconocido": "No entendí tu pregunta, ¿podés decirlo de otra manera?"
+}

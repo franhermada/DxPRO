@@ -1,0 +1,1082 @@
+/* === CASOS BÁSICOS - ESTÉTICA GENERAL === */
+.casos-basicos .card {
+  border-top: 5px solid #0070c9;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 4px 10px rgba(0, 112, 201, 0.25);
+  border-radius: 14px;
+  padding: 20px 24px;
+  color: #002b5c;
+  animation: fadeIn 0.5s ease-in-out;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Título y descripción de la sección: ocultos para ganar espacio */
+.casos-basicos h2,
+.casos-basicos .titulo-seccion,
+.casos-basicos .descripcion-seccion {
+  display: none !important;
+}
+
+/* === HEADER Y CONTROLES SUPERIORES === */
+/* Este header solo se usa como contenedor de los botones de control.
+   Lo hacemos "sin altura" y posicionamos los botones sobre la barra principal. */
+.header-con-controles {
+  position: relative;
+  margin-bottom: 0;
+  height: 0;
+}
+
+.header-texto {
+  display: none; /* Ocultamos el bloque que tenía CASOS BÁSICOS + descripción */
+}
+
+.controles-pantalla {
+  position: absolute;
+  top: 6px;       /* Lo alineamos visualmente con la barra del caso */
+  right: 10px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex-shrink: 0;
+  z-index: 5;     /* Por encima de la barra */
+}
+
+/* === SISTEMAS Y SELECCIÓN === */
+.sistemas-container {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.sistemas-container h3 {
+  margin-bottom: 20px;
+  color: #002b5c;
+  font-size: 1.3rem;
+}
+
+.botones-sistemas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.boton-sistema {
+  background: #0070c9;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.boton-sistema:hover {
+  background: #005fa3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* === CARGA === */
+.cargando-caso {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #0070c9;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* === CONTENEDOR PRINCIPAL DEL CHAT === */
+.caso-chat-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.chat-area {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* === BARRA SUPERIOR MEJORADA (gran tamaño + claridad) === */
+.caso-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  background: #005bb5;
+  color: white;
+
+  padding: 12px 20px;
+  border-radius: 0 0 10px 10px;
+  margin-bottom: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 60px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Título del sistema más grande */
+.info-caso h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+/* Centro (fase + ocultar/mostrar botones) */
+.barra-centro {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+/* Botones mejorados */
+.btn-pistas,
+.btn-pantalla-completa {
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;            /* Más grandes */
+  font-size: 0.85rem;           /* Mejora legibilidad */
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-pistas {
+  background: #28a745;
+  color: white;
+}
+
+.btn-pantalla-completa {
+  background: #444;
+  color: white;
+}
+
+.btn-pistas:hover,
+.btn-pantalla-completa:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.15);
+}
+
+/* Derecha: alineación mejorada */
+.barra-derecha {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+/* Izquierda: nombre del sistema */
+.info-caso h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* Centro-derecha: fase, badge fullscreen */
+.estadisticas-caso {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  font-size: 0.75rem;
+}
+
+.fase-actual,
+.badge-pantalla-completa {
+  background: rgba(255, 255, 255, 0.25);
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 0.70rem;
+  font-weight: 600;
+}
+
+/* Botones de pistas y pantalla completa (apoyados sobre la barra) */
+.btn-pistas,
+.btn-pantalla-completa {
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  font-size: 0.70rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.btn-pistas {
+  background: #28a745;
+  color: white;
+}
+
+.btn-pistas:hover {
+  background: #218838;
+  transform: translateY(-1px);
+}
+
+.btn-pantalla-completa {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-pantalla-completa:hover {
+  background: #545b62;
+  transform: translateY(-1px);
+}
+
+/* === ÁREA DE MENSAJES === */
+.chat-mensajes {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  background: #fafafa;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  scroll-behavior: smooth;
+  min-height: 350px;
+  max-height: 500px;
+}
+
+/* Scroll suave mejorado */
+.chat-mensajes {
+  scrollbar-width: thin;
+  scrollbar-color: #0070c9 #f1f1f1;
+}
+
+.chat-mensajes::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-mensajes::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.chat-mensajes::-webkit-scrollbar-thumb {
+  background: #0070c9;
+  border-radius: 4px;
+}
+
+.chat-mensajes::-webkit-scrollbar-thumb:hover {
+  background: #005fa3;
+}
+
+/* === ESTILOS DE MENSAJES === */
+.mensaje-presentacion {
+  background: #e3f2fd;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 8px 0;
+  border-left: 4px solid #2196f3;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.mensaje-transicion {
+  background: #fff3e0;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 8px 0;
+  border-left: 4px solid #ff9800;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.mensaje {
+  max-width: 75%;
+  padding: 12px 16px;
+  border-radius: 18px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  word-wrap: break-word;
+  animation: fadeInUp 0.3s ease forwards;
+}
+
+.mensaje-bot {
+  align-self: flex-start;
+  background-color: #e0eaff;
+  color: #002b5c;
+  box-shadow: 0 2px 6px rgba(0, 43, 92, 0.15);
+}
+
+.mensaje-usuario {
+  align-self: flex-end;
+  background-color: #0056b3;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Estados de mensajes mejorados */
+.mensaje-excelente {
+  background: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+  border-left: 4px solid #28a745;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 8px 0;
+}
+
+.mensaje-bueno {
+  background: #d1ecf1;
+  border: 1px solid #bee5eb;
+  color: #0c5460;
+  border-left: 4px solid #17a2b8;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 8px 0;
+}
+
+.mensaje-regular {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  color: #856404;
+  border-left: 4px solid #ffc107;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 8px 0;
+}
+
+.mensaje-pista {
+  background: #e2e3e5;
+  border: 1px solid #d6d8db;
+  color: #383d41;
+  border-left: 4px solid #6c757d;
+  font-style: italic;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 8px 0;
+}
+
+.mensaje-resultado-estudio {
+  background: #cce7ff;
+  border: 1px solid #b3d9ff;
+  color: #004085;
+  border-left: 4px solid #0066cc;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 8px 0;
+}
+
+.mensaje-ayuda,
+.mensaje-advertencia {
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  color: #856404;
+  border-left: 4px solid #ffc107;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 8px 0;
+}
+
+.mensaje-error {
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+  border-left: 4px solid #dc3545;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 8px 0;
+}
+
+/* === CONTROLES DEL CHAT === */
+.chat-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.chat-input-container {
+  background: white;
+  padding: 0;
+  border-radius: 10px;
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 5px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: white;
+  color: #000000;
+}
+
+.chat-input input:focus {
+  border-color: #0070c9;
+  box-shadow: 0 0 8px rgba(0, 112, 201, 0.3);
+  outline: none;
+}
+
+.chat-input input:disabled {
+  background: #f8f9fa;
+  color: #6c757d;
+}
+
+.chat-input button {
+  background-color: #0070c9;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  min-width: 80px;
+}
+
+.chat-input button:hover:not(:disabled) {
+  background-color: #005fa3;
+  transform: translateY(-2px);
+}
+
+.chat-input button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.chat-input button.enviando {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* === BOTONES DE FASE === */
+.fase-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 10px 0;
+}
+
+.btn-avanzar {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.btn-avanzar:hover {
+  background-color: #0052a3;
+  transform: translateY(-2px);
+}
+
+.btn-finalizar {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.btn-finalizar:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+/* === PISTAS INTELIGENTES === */
+.pistas-section {
+  margin: 10px 0;
+}
+
+.pistas-container {
+  background: #e8f5e8;
+  border: 2px solid #28a745;
+  border-radius: 12px;
+  padding: 20px;
+  animation: slideDown 0.3s ease;
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.15);
+}
+
+.pistas-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.pistas-header h4 {
+  margin: 0 0 8px 0;
+  color: #155724;
+  font-size: 1.2rem;
+}
+
+.pistas-header small {
+  color: #6c757d;
+  font-style: italic;
+}
+
+.botones-pistas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.boton-pista {
+  background: white;
+  border: 2px solid #28a745;
+  color: #155724;
+  padding: 12px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.boton-pista:hover {
+  background: #28a745;
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-cerrar-pistas {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.btn-cerrar-pistas:hover {
+  background: #545b62;
+}
+
+/* === PANEL DE ESTUDIOS === */
+.panel-estudios {
+  background: #e8f5e8;
+  border: 1px solid #28a745;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 15px 0;
+}
+
+.panel-estudios h4 {
+  margin: 0 0 15px 0;
+  color: #155724;
+  text-align: center;
+}
+
+.lista-estudios {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.estudio-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: white;
+  padding: 12px 15px;
+  border-radius: 6px;
+  border-left: 4px solid #28a745;
+}
+
+.estudio-item strong {
+  color: #155724;
+  font-size: 1rem;
+}
+
+.estudio-item span {
+  color: #495057;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* === EVALUACIÓN === */
+.evaluacion-form {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 25px;
+  margin-top: 20px;
+  text-align: left;
+  border: 1px solid #dee2e6;
+}
+
+.evaluacion-form h3 {
+  color: #002b5c;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.instrucciones-evaluacion {
+  color: #6c757d;
+  margin-bottom: 25px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.campo-evaluacion {
+  margin-bottom: 25px;
+}
+
+.campo-evaluacion label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #002b5c;
+  font-size: 1.1rem;
+}
+
+.campo-evaluacion input,
+.campo-evaluacion textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  border: 2px solid #e0e0e0;
+  background-color: white;
+  color: #333;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.campo-evaluacion input:focus,
+.campo-evaluacion textarea:focus {
+  border-color: #0070c9;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 112, 201, 0.2);
+}
+
+.campo-evaluacion textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.btn-evaluar {
+  background-color: #0070c9;
+  color: white;
+  padding: 16px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  width: 100%;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.btn-evaluar:hover {
+  background-color: #005fa3;
+  transform: translateY(-2px);
+}
+
+/* === RESULTADOS DE EVALUACIÓN === */
+.evaluacion-resultado {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 25px;
+  margin-top: 20px;
+  text-align: left;
+  border: 1px solid #dee2e6;
+}
+
+.header-resultado {
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.header-resultado h3 {
+  color: #002b5c;
+  margin-bottom: 15px;
+}
+
+.resumen-evaluacion {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.puntaje {
+  background: #0070c9;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.grid-resultados {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.resultado-seccion {
+  margin-bottom: 25px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  border-left: 4px solid #0070c9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resultado-seccion h4 {
+  margin: 0 0 15px 0;
+  color: #002b5c;
+  font-size: 1.2rem;
+}
+
+.correcto {
+  color: #155724;
+  background: #d4edda;
+  padding: 12px;
+  border-radius: 6px;
+  margin: 8px 0;
+  border-left: 4px solid #28a745;
+}
+
+.incorrecto {
+  color: #721c24;
+  background: #f8d7da;
+  padding: 12px;
+  border-radius: 6px;
+  margin: 8px 0;
+  border-left: 4px solid #dc3545;
+}
+
+.faltante {
+  color: #856404;
+  background: #fff3cd;
+  padding: 12px;
+  border-radius: 6px;
+  margin: 8px 0;
+  border-left: 4px solid #ffc107;
+}
+
+.tratamiento-detalle {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.metricas-proceso {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.metrica {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.metrica .label {
+  font-weight: 600;
+  color: #495057;
+}
+
+.metrica .valor {
+  color: #002b5c;
+  font-weight: 500;
+}
+
+/* === BOTONES DE ACCIÓN (RESULTADOS) === */
+.acciones-resultado {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 1px solid #e9ecef;
+}
+
+.btn-volver,
+.btn-revisar,
+.volver-btn {
+  background-color: #6c757d;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.btn-volver:hover,
+.btn-revisar:hover,
+.volver-btn:hover {
+  background-color: #545b62;
+  transform: translateY(-2px);
+}
+
+.btn-revisar {
+  background-color: #0070c9;
+}
+
+.btn-revisar:hover {
+  background-color: #005fa3;
+}
+
+.volver-btn {
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* === ANIMACIONES GENERALES === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === PANTALLA COMPLETA === */
+.casos-basicos.pantalla-completa .card {
+  min-height: 100vh;         /* en vez de height: 100vh */
+  height: auto !important;
+  
+  width: 100vw;
+  max-width: none;
+  border-radius: 0;
+  padding: 20px;
+  
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto !important;   /* habilita scroll vertical */
+}
+
+.casos-basicos.pantalla-completa .caso-chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.casos-basicos.pantalla-completa .chat-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Limitamos la altura del chat para que no tape el input ni los botones */
+.casos-basicos.pantalla-completa .chat-mensajes {
+  flex: 1;
+  max-height: calc(100vh - 260px);
+  min-height: 300px;
+  overflow-y: auto;
+}
+
+/* Mantener controles visibles al final */
+.casos-basicos.pantalla-completa .chat-controls {
+  position: sticky;
+  bottom: 0;
+  background: white;
+  padding-top: 10px;
+  z-index: 20;
+}
+
+.casos-basicos.pantalla-completa .chat-input-container {
+  position: sticky;
+  bottom: 0;
+  background: white;
+  padding: 10px 0 0 0;
+  border-top: 2px solid #e0e0e0;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .casos-basicos .card {
+    padding: 16px;
+  }
+
+  .botones-sistemas {
+    grid-template-columns: 1fr;
+  }
+
+  .mensaje {
+    max-width: 90%;
+  }
+
+  .fase-buttons {
+    flex-direction: column;
+  }
+
+  .chat-input {
+    flex-direction: column;
+  }
+
+  .chat-input input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .grid-resultados {
+    grid-template-columns: 1fr;
+  }
+
+  .botones-pistas {
+    grid-template-columns: 1fr;
+  }
+
+  .acciones-resultado {
+    flex-direction: column;
+  }
+
+  .estadisticas-caso {
+    flex-direction: row;
+    gap: 6px;
+  }
+
+  .controles-pantalla {
+    top: 4px;
+    right: 6px;
+    gap: 4px;
+  }
+
+  .btn-pistas,
+  .btn-pantalla-completa {
+    font-size: 0.65rem;
+    padding: 3px 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .boton-sistema {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
+
+  .chat-mensajes {
+    padding: 15px;
+    min-height: 280px;
+  }
+
+  .info-caso h3 {
+    font-size: 0.85rem;
+  }
+}
+/* Permitir que las pistas se vean en pantalla completa */
+.casos-basicos.pantalla-completa .pistas-section {
+  max-height: 45vh;
+  overflow-y: auto;
+}
+.casos-basicos.pantalla-completa .chat-area {
+  overflow-y: visible !important;
+}
+.caso-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.barra-centro {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.barra-derecha {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+/* --- FIX: PISTAS VISIBLE EN FULLSCREEN --- */
+.casos-basicos.pantalla-completa .pistas-section {
+  position: relative !important;
+  z-index: 50 !important;
+  background: white;
+}
+
+.casos-basicos.pantalla-completa .pistas-container {
+  max-height: 50vh !important;
+  overflow-y: auto !important;
+  z-index: 60 !important;
+}
+
+/* Input queda debajo de las pistas */
+.casos-basicos.pantalla-completa .chat-input-container {
+  z-index: 10 !important;
+}
